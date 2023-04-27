@@ -23,9 +23,12 @@ public class Program {
 		//list.forEach(new PriceUpdateConsumer());
 		//list.forEach(Product::staticPriceUpdate);
 		//list.forEach(Product::nonStaticPriceUpdate);
-		
-		Consumer<Product> cons = p -> p.setPrice(p.getPrice() * 1.10);
-		list.forEach(cons);
+		/*
+		 * Consumer<Product> cons = p -> p.setPrice(p.getPrice() * 1.10);
+		 * list.forEach(cons);
+		 */
+				
+		list.forEach(p -> p.setPrice(p.getPrice() * 1.10));
 		
 		list.forEach(System.out::println);
 
